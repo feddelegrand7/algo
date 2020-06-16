@@ -1,15 +1,16 @@
 ---
-output: github_document
+title: "Introduction"
+output: rmarkdown::html_vignette
+vignette: >
+  %\VignetteIndexEntry{Introduction}
+  %\VignetteEngine{knitr::rmarkdown}
+  %\VignetteEncoding{UTF-8}
 ---
-
-<!-- README.md is generated from README.Rmd. Please edit that file -->
 
 ```{r, include = FALSE}
 knitr::opts_chunk$set(
   collapse = TRUE,
-  comment = "#>",
-  fig.path = "man/figures/README-",
-  out.width = "100%"
+  comment = "#>"
 )
 ```
 
@@ -82,8 +83,7 @@ The `algo` package has two functions:
 ## Example
 
 
-Let's create a basic shiny application to demonstrate the features of the package: 
-
+Run the following shiny app to get an idea about the package's features:
 
 
 ```{r, eval = FALSE}
@@ -116,24 +116,9 @@ shinyApp(ui, server)
 
 ```
 
-![](man/figures/algoexample.gif)
-
 ## Code of Conduct
 
 Please note that the algo project is released with a [Contributor Code of Conduct](https://contributor-covenant.org/version/2/0/CODE_OF_CONDUCT.html). By contributing to this project, you agree to abide by its terms.
-
-
-
-
-
-
-
-
-
-
-
-
-
 
 
 
