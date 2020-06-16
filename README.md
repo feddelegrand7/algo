@@ -16,8 +16,9 @@ Completion Menu on shiny Text Inputs.
 In order to use the Algolia Places JavaScript library, you’ll need
 create a free
 [Places](https://community.algolia.com/places/pricing.html) application
-in which you can get an **ID** and an **API KEY**. The library is free
-up to 1,000 requests / day which is quite cool for most users.
+in which you can get an **ID** and an **API KEY**. When you sign up,
+you’ll be able to run 100,000 requests/month which is quite cool for
+most users.
 
 After that, set your credentials within the **.Renviron** file which can
 be opened with:
