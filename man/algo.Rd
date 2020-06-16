@@ -25,7 +25,8 @@ Implement the Algolia Places address search-autocompletion menu on shiny text in
 \dontrun{
 
 
-# You must set the Algolia ID and KEY within your R environment: name them ALGOLIA_ID and ALGOLIA_KEY, respectively
+# You must set the Algolia ID and KEY within your R environment:
+# name them ALGOLIA_ID and ALGOLIA_KEY, respectively
 # Don't forget to set use_algolia() at the beginning of your UI
 
 use_algolia(),
@@ -34,7 +35,7 @@ use_algolia(),
 
 textInput(inputId = "inp1", label = "Provide an address")
 
-# Implementing the Alglia Places library
+# Implementing the Algolia Places library
 
 algo(element = "#inp1", countries = "us", language = "de"),
 

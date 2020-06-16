@@ -12,7 +12,8 @@
 #' @examples \dontrun{
 #'
 #'
-#' # You must set the Algolia ID and KEY within your R environment: name them ALGOLIA_ID and ALGOLIA_KEY, respectively
+#' # You must set the Algolia ID and KEY within your R environment:
+#' # name them ALGOLIA_ID and ALGOLIA_KEY, respectively
 #' # Don't forget to set use_algolia() at the beginning of your UI
 #'
 #' use_algolia(),
@@ -21,7 +22,7 @@
 #'
 #' textInput(inputId = "inp1", label = "Provide an address")
 #'
-#' # Implementing the Alglia Places library
+#' # Implementing the Algolia Places library
 #'
 #' algo(element = "#inp1", countries = "us", language = "de"),
 #'
@@ -46,7 +47,7 @@ algo <- function(element, type = 'address', language = "en_US", countries = NULL
   if(is.null(countries)) {
 
 
-    htmltools::tags$script(HTML(
+    htmltools::tags$script(htmltools::HTML(
 
       glue::glue(
 
@@ -82,7 +83,7 @@ algo <- function(element, type = 'address', language = "en_US", countries = NULL
     r_countries <- jsonlite::toJSON(countries)
 
 
-    htmltools::tags$script(HTML(
+    htmltools::tags$script(htmltools::HTML(
 
       glue::glue(
 
