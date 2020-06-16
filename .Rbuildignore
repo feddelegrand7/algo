@@ -1,0 +1,5 @@
+^.*\.Rprojalgo
+^\.Rproj\.useralgo
+^LICENSE\.md$
+^.*\.Rproj$
+^\.Rproj\.user$
