@@ -6,7 +6,8 @@ Authors@R:
            family = "Ihaddaden",
            role = c("aut", "cre"),
            email = "ihaddaden.fodeil@gmail.com")
-Description: What the package does (one paragraph).
+Description: Allows the user to implement an address search auto completion menu on 'shiny' text inputs.
+    This is done using the 'Algolia Places' 'JavaScript' library. See <https://community.algolia.com/>
 License: MIT + file LICENSE
 Encoding: UTF-8
 LazyData: true
