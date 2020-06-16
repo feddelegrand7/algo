@@ -1,4 +1,4 @@
-algo <- function(element){
+algo <- function(element, type = 'address'){
 
   ID <- Sys.getenv('ALGOLIA_ID')
   KEY <- Sys.getenv('ALGOLIA_KEY')
@@ -21,6 +21,12 @@ algo <- function(element){
       appId: '{ID}',
       apiKey: '{KEY}',
       container: document.querySelector('{element}')
+    }}).configure({{
+
+
+    type: '{type}'
+
+
     }});
 
 
