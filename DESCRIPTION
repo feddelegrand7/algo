@@ -17,3 +17,5 @@ Imports:
     glue,
     htmltools,
     jsonlite
+URL: https://github.com/feddelegrand7/algo
+BugReports: https://github.com/feddelegrand7/algo/issues
