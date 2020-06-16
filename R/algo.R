@@ -1,4 +1,4 @@
-algo <- function(element, type = 'address'){
+algo <- function(element, type = 'address', language = "en_US", countries = NULL){
 
   ID <- Sys.getenv('ALGOLIA_ID')
   KEY <- Sys.getenv('ALGOLIA_KEY')
@@ -9,13 +9,14 @@ algo <- function(element, type = 'address'){
   }
 
 
+  if(is.null(countries)) {
 
 
-  htmltools::tags$script(HTML(
+    htmltools::tags$script(HTML(
 
-  glue::glue(
+      glue::glue(
 
-    "
+        "
 
   var placesAutocomplete = places({{
       appId: '{ID}',
@@ -24,7 +25,47 @@ algo <- function(element, type = 'address'){
     }}).configure({{
 
 
-    type: '{type}'
+    type: '{type}',
+
+    language: '{language}'
+
+    }});
+
+
+  "
+
+
+      )
+
+    ))
+
+
+
+
+  } else {
+
+
+    r_countries <- jsonlite::toJSON(countries)
+
+
+    htmltools::tags$script(HTML(
+
+      glue::glue(
+
+        "
+
+  var placesAutocomplete = places({{
+      appId: '{ID}',
+      apiKey: '{KEY}',
+      container: document.querySelector('{element}')
+    }}).configure({{
+
+
+    type: '{type}',
+
+    language: '{language}',
+
+    countries: {r_countries}
 
 
     }});
@@ -33,9 +74,25 @@ algo <- function(element, type = 'address'){
   "
 
 
-  )
+      )
 
-  ))
+    ))
+
+
+
+
+
+
+
+
+
+
+
+
+
+  }
+
+
 
 
 
