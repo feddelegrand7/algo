@@ -105,12 +105,7 @@ ui <- fluidPage(
 )
 
 
-server <- function(input, output) {
-
-
-
-
-}
+server <- function(input, output) {}
 
 shinyApp(ui, server)
 
@@ -146,12 +141,7 @@ ui <- fluidPage(
 )
 
 
-server <- function(input, output) {
-
-
-
-
-}
+server <- function(input, output) {}
 
 shinyApp(ui, server)
 
@@ -179,19 +169,13 @@ ui <- fluidPage(
   textInput(inputId = "inp1", label = "Where do you live in Japon ?", width = "800px"), 
   
   
-  algo(element = "#inp1", type = "address", countries = "jp"), # Don't forget to add the # to your ID
+  algo(element = "#inp1", type = "address", countries = "jp") # Don't forget to add the # to your ID
   
-
   
 )
 
 
-server <- function(input, output) {
-
-
-
-
-}
+server <- function(input, output) {}
 
 shinyApp(ui, server)
 
@@ -214,32 +198,68 @@ ui <- fluidPage(
   use_algolia(), 
   
   
-  textInput(inputId = "inp1", label = "Where do you live in Germany ?", width = "800px"), 
+  textInput(inputId = "inp1", label = "Where do you live in Spain ?", width = "800px"), 
   
   
-  algo(element = "#inp1", type = "city", countries = "es", language = "de"), # Don't forget to add the # to your ID
-  
-
+  algo(element = "#inp1", type = "city", countries = "es", language = "de") # Don't forget to add the # to your ID
   
 )
 
 
-server <- function(input, output) {
-
-
-
-
-}
+server <- function(input, output) {}
 
 shinyApp(ui, server)
 
 ```
 ![](man/figures/algoexample4.gif)
 
+Finally, you can collect the addresses the same way as any other shiny inputs: 
 
 
+```{r, eval=FALSE}
 
 
+library(shiny)
+library(algo)
+
+
+ui <- fluidPage(
+  
+  use_algolia(), 
+  
+  
+  textInput(inputId = "inp1", label = "Where do you live in Spain ?", width = "800px"), 
+  
+  
+  algo(element = "#inp1", type = "city", countries = "es", language = "de"), # Don't forget to add the # to your ID
+  
+  textOutput(outputId = "txt1")
+  
+  
+)
+
+
+server <- function(input, output) {
+  
+  
+output$txt1 <- renderText({
+  
+  req(input$inp1)
+  
+  
+  paste0("I KNOW WHERE YOU LIVE O_O:  ", input$inp1)
+  
+  
+})
+  
+  
+}
+
+shinyApp(ui, server)
+
+```
+
+![](man/figures/algoexample5.gif)
 
 
 
