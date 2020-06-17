@@ -100,6 +100,120 @@ shinyApp(ui, server)
 
 ![](man/figures/algoexample.gif)
 
+Using the `type` argument you can specify which type of geographic
+information to collect:
+
+``` r
+
+library(shiny)
+library(algo)
+
+
+ui <- fluidPage(
+  
+  use_algolia(), 
+  
+  
+  textInput(inputId = "inp1", label = "Please introduce your country", width = "800px"), 
+  
+  textInput(inputId = "inp2", label = "Now introduce your city", width = "800px"),
+  
+  
+  algo(element = "#inp1", type = "country"), # Don't forget to add the # to your ID
+  
+  algo(element = "#inp2", type = "city")
+  
+  
+)
+
+
+server <- function(input, output) {
+
+
+
+
+}
+
+shinyApp(ui, server)
+```
+
+![](man/figures/algoexample2.gif)
+
+You can also specify in which country (or countries) you want to get the
+addresses. This will set a delimitation according to the chosen country:
+
+``` r
+
+
+library(shiny)
+library(algo)
+
+
+ui <- fluidPage(
+  
+  use_algolia(), 
+  
+  
+  textInput(inputId = "inp1", label = "Where do you live in Japon ?", width = "800px"), 
+  
+  
+  algo(element = "#inp1", type = "address", countries = "jp"), # Don't forget to add the # to your ID
+  
+
+  
+)
+
+
+server <- function(input, output) {
+
+
+
+
+}
+
+shinyApp(ui, server)
+```
+
+![](man/figures/algoexample3.gif)
+
+Further, you can specify which language should be displayed when
+collecting the addresses (note that it will only translate partially the
+addresses):
+
+``` r
+
+
+library(shiny)
+library(algo)
+
+
+ui <- fluidPage(
+  
+  use_algolia(), 
+  
+  
+  textInput(inputId = "inp1", label = "Where do you live in Germany ?", width = "800px"), 
+  
+  
+  algo(element = "#inp1", type = "city", countries = "es", language = "de"), # Don't forget to add the # to your ID
+  
+
+  
+)
+
+
+server <- function(input, output) {
+
+
+
+
+}
+
+shinyApp(ui, server)
+```
+
+![](man/figures/algoexample4.gif)
+
 ## Code of Conduct
 
 Please note that the algo project is released with a [Contributor Code
