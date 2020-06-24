@@ -16,15 +16,25 @@
 #' # name them ALGOLIA_ID and ALGOLIA_KEY, respectively
 #' # Don't forget to set use_algolia() at the beginning of your UI
 #'
+#'ui <- fluidPage(
+#'
 #' use_algolia(),
+#'
 #'
 #' # Creting the shiny text input
 #'
-#' textInput(inputId = "inp1", label = "Provide an address")
+#' textInput(inputId = "inp1", label = "Provide an address"),
 #'
-#' # Implementing the Algolia Places library
+#' # Implementing the Algolia Places adresses menu
 #'
-#' algo(element = "#inp1", countries = "us", language = "de"),
+#' algo(element = "#inp1", countries = "us", language = "de")
+#'
+#')
+#'
+#'
+#'server <- function(input, output){}
+#'
+#'shinyApp(ui, server)
 #'
 #'
 #'
