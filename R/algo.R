@@ -1,6 +1,10 @@
 
 #' Implement the Algolia Places address search-autocompletion menu on shiny text inputs
 #'
+#' @description In order to use this function, the user must get an application ID and an API key from the Algolia website
+#' and store them within her environment (please refer to the package's vignette). He must also put the use_algolia() function at the beginning of her shiny ui.
+#'
+#
 #' @param element the shiny text element that will be used for the Algolia Places autocompletion menu
 #' @param type Restrict the search results to a specific type. The user can choose from "city", "country", "address", "busStop", "trainStation", "townhall" and airport. Defaults to "address".
 #' @param language Get the results in a specific language. The user can pass two letters language codes (ISO 639-1). Defaults to "en_US"
@@ -9,38 +13,7 @@
 #' @return An address search-autocompletion menu on shiny text inputs
 #' @export
 #'
-#' @examples \dontrun{
-#'
-#'
-#' # You must set the Algolia ID and KEY within your R environment:
-#' # name them ALGOLIA_ID and ALGOLIA_KEY, respectively
-#' # Don't forget to set use_algolia() at the beginning of your UI
-#'
-#'ui <- fluidPage(
-#'
-#' use_algolia(),
-#'
-#'
-#' # Creting the shiny text input
-#'
-#' textInput(inputId = "inp1", label = "Provide an address"),
-#'
-#' # Implementing the Algolia Places adresses menu
-#'
-#' algo(element = "#inp1", countries = "us", language = "de")
-#'
-#')
-#'
-#'
-#'server <- function(input, output){}
-#'
-#'shinyApp(ui, server)
-#'
-#'
-#'
-#'
-#'
-#' }
+
 
 
 algo <- function(element, type = 'address', language = "en_US", countries = NULL){
