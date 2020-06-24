@@ -5,6 +5,10 @@
 
 <!-- badges: start -->
 
+![CRAN status](https://www.r-pkg.org/badges/version/algo)
+
+![](http://cranlogs.r-pkg.org/badges/grand-total/algo?color=blue)
+
 <!-- badges: end -->
 
 The `algo` package allows you to implement the [Algolia

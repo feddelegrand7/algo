@@ -16,6 +16,14 @@ knitr::opts_chunk$set(
 # algo
 
 <!-- badges: start -->
+
+![CRAN
+status](https://www.r-pkg.org/badges/version/algo)
+
+![](http://cranlogs.r-pkg.org/badges/grand-total/algo?color=blue)
+
+
+
 <!-- badges: end -->
 
 The `algo` package allows you to implement the [Algolia Places](https://community.algolia.com/places/) Address Search Auto Completion Menu on shiny Text Inputs.
