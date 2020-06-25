@@ -48,6 +48,13 @@ Finally, save your .Renviron file, close it and restart your R session.
 
 ## Installation
 
+You can install the `algo` package from
+[CRAN](https://CRAN.R-project.org/package=algo) with:
+
+``` r
+install.packages("algo")
+```
+
 You can install the development version of `algo` from Github with:
 
 ``` r
