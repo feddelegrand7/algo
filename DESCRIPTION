@@ -1,11 +1,9 @@
 Package: algo
 Title: Implement an Address Search Auto Completion Menu on 'Shiny' Text Inputs Using the 'Algolia Places' 'Javascript' Library
 Version: 0.1.0
-Authors@R: 
-    person(given = "Mohamed El Fodil",
-           family = "Ihaddaden",
-           role = c("aut", "cre"),
-           email = "ihaddaden.fodeil@gmail.com")
+Authors@R: c(
+    person("Mohamed El Fodil", "Ihaddaden", email = "ihaddaden.fodeil@gmail.com", role = c("aut", "cre")),
+    person("Algolia contributors", role = c("ctb", "cph"), comment = "algolia places javascript library developers")) 
 Description: Allows the user to implement an address search auto completion menu on 'shiny' text inputs.
     This is done using the 'Algolia Places' 'JavaScript' library. See <https://community.algolia.com/places/>.
 License: MIT + file LICENSE
