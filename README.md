@@ -5,12 +5,23 @@
 
 <!-- badges: start -->
 
-![CRAN status](https://www.r-pkg.org/badges/version/algo)
+[![CRAN\_Status\_Badge](https://www.r-pkg.org/badges/version/algo)](https://cran.r-project.org/package=algo)
 
-![](http://cranlogs.r-pkg.org/badges/grand-total/algo?color=blue)
+[![CRAN\_time\_from\_release](https://www.r-pkg.org/badges/ago/algo)](https://cran.r-project.org/package=algo)
 
-<a href="https://www.buymeacoffee.com/Fodil" target="_blank"><img src="https://www.buymeacoffee.com/assets/img/custom_images/orange_img.png" alt="Buy Me A Coffee" style="height: 41px !important;width: 174px !important;box-shadow: 0px 3px 2px 0px rgba(190, 190, 190, 0.5) !important;-webkit-box-shadow: 0px 3px 2px 0px rgba(190, 190, 190, 0.5) !important;" ></a>
+[![metacran
+downloads](https://cranlogs.r-pkg.org/badges/algo)](https://cran.r-project.org/package=algo)
 
+[![metacran
+downloads](https://cranlogs.r-pkg.org/badges/grand-total/algo)](https://cran.r-project.org/package=algo)
+
+[![license](https://img.shields.io/github/license/mashape/apistatus.svg)](https://choosealicense.com/licenses/mit/)
+
+[![Travis build
+status](https://travis-ci.com/feddelegrand7/algo.svg?branch=master)](https://travis-ci.com/feddelegrand7/algo)
+
+[![R
+badge](https://img.shields.io/badge/Build%20with-♥%20and%20R-purple)](https://github.com/feddelegrand7/algo)
 <!-- badges: end -->
 
 The `algo` package allows you to implement the [Algolia
@@ -157,7 +168,7 @@ ui <- fluidPage(
   use_algolia(), 
   
   
-  textInput(inputId = "inp1", label = "Where do you live in Japon ?", width = "800px"), 
+  textInput(inputId = "inp1", label = "Where do you live in Japan ?", width = "800px"), 
   
   
   algo(element = "#inp1", type = "address", countries = "jp") # Don't forget to add the # to your ID
